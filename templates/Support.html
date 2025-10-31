@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Romify Support</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #0f1724;
+      --bg-light: #061224;
+      --accent: #22c1c3;
+      --accent2: #4a67ff;
+      --text-light: #e6eef6;
+      --transition: 0.3s ease;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      font-family: 'Inter', sans-serif;
+      overflow: hidden; /* disables scrolling */
+    }
+
+    h2 {
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .navbar {
+      background: transparent;
+      padding: 0.7rem 1rem;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1030;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .navbar .navbar-brand {
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar .nav-link {
+      color: #9aa5b1;
+      transition: color 0.2s;
+    }
+
+    .navbar .nav-link:hover {
+      color: #fff;
+    }
+
+    .support-container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-top: 80px; /* space for navbar */
+      padding-bottom: 40px;
+    }
+
+    .support-card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 30px;
+      transition: var(--transition);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .support-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent);
+    }
+
+    .form-control,
+    .form-select {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: var(--text-light);
+      border-radius: 10px;
+      transition: var(--transition);
+      appearance: none;
+    }
+
+    .form-control::placeholder {
+      color: #9aa5b1;
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-light);
+      border-color: var(--accent);
+      box-shadow: 0 0 8px rgba(34, 193, 195, 0.3);
+    }
+
+    select option {
+      background-color: #0f1724;
+      color: var(--text-light);
+    }
+
+    select.form-select {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23e6eef6' viewBox='0 0 16 16'%3e%3cpath d='M7.247 11.14 2.451 5.658C2.073 5.207 2.37 4.5 2.951 4.5h10.098c.58 0 .877.707.5 1.158l-4.796 5.482a.5.5 0 0 1-.756 0z'/%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right .75rem center;
+      background-size: 16px 12px;
+    }
+
+    .btn-gradient {
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      color: #061224;
+      font-weight: 600;
+      border: none;
+      border-radius: 30px;
+      padding: 10px 40px;
+      transition: var(--transition);
+    }
+
+    .btn-gradient:hover {
+      transform: scale(1.05);
+      color: #fff;
+    }
+
+    footer {
+      color: #9aa5b1;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-height: 700px) {
+      body {
+        overflow-y: auto; /* allow scroll on smaller screens */
+      }
+      .support-container {
+        padding-top: 100px;
+        padding-bottom: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://github.com/eshuuux/Images/blob/main/Frame%2022.png?raw=true" width="30" height="30" class="me-2" alt="Logo">
+        Romify
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav me-2">
+          <li class="nav-item"><a class="nav-link fw-semibold" href="/homepage">Home</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="/devices">Download</a></li>
+          <li class="nav-item"><a class="nav-link fw-semibold" href="/userdash">Account</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Support Section -->
+  <div class="support-container">
+    <div class="text-center mb-4">
+      <h2 class="fw-bold">Romify Support</h2>
+    </div>
+    <div class="support-card">
+      <form action="/supportform" method="POST">
+        <div class="mb-3">
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-control" name="Name1" placeholder="Enter your full name">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Email Address</label>
+          <input type="email" class="form-control" name="Email1" placeholder="you@example.com">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Issue Type</label>
+          <select class="form-select" name="Issue1">
+            <option selected disabled>Select an issue</option>
+            <option>Bug or Error</option>
+            <option>Installation Problem</option>
+            <option>Performance Issue</option>
+            <option>General Feedback</option>
+          </select>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Describe Your Issue</label>
+          <textarea class="form-control" rows="3" name="Description1" placeholder="Explain your issue..."></textarea>
+        </div>
+
+        <div class="text-center mt-4">
+          <button type="submit" class="btn-gradient">Submit Request</button>
+        </div>
+      </form>
+    </div>
+    <footer>
+      <p class="mt-4">© 2025 Romify | All rights reserved.</p>
+    </footer>
+  </div>
+
+</body>
+</html>

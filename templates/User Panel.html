@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Romify User Panel</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #0b1622;
+      color: #e6eef6;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: transparent !important;
+      padding: 1rem 1rem;
+    }
+
+    .navbar .nav-link {
+      color: #e6eef6;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .navbar .nav-link:hover {
+      color: #14b8a6;
+    }
+
+    .navbar .navbar-brand {
+      font-weight: 700;
+      color: #fff;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Center content */
+    .content {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background-color: #15263d;
+      border: none;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+      margin-bottom: 30px;
+    }
+
+    .btn-gradient {
+      background: linear-gradient(90deg, #14b8a6, #2563eb);
+      color: white;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-gradient:hover {
+      opacity: 0.9;
+      box-shadow: 0 0 10px rgba(37, 99, 235, 0.6);
+    }
+
+    .card p,
+    .card label,
+    .card strong,
+    .card input::placeholder {
+      color: #e6eef6 !important;
+    }
+
+    .card .form-label {
+      color: #ffffff !important;
+      font-weight: 600;
+    }
+
+    .card input.form-control::placeholder {
+      color: rgba(255, 255, 255, 0.5) !important;
+    }
+
+    .table {
+      color: #e6eef6;
+    }
+
+    .table thead {
+      background-color: #0e1a29;
+    }
+
+    .table th {
+      border-bottom: 2px solid #1e2e47;
+    }
+
+    .table td {
+      border-color: #1e2e47;
+    }
+
+    h4 {
+      color: #ffffff;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    h4 i {
+      color: #14b8a6;
+    }
+
+    @media (max-width: 768px) {
+      .content {
+        margin: 20px auto;
+        padding: 0 10px;
+      }
+    }
+
+/* Navbar */
+.navbar {
+  background: transparent !important;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* subtle grey line */
+}
+
+/* Downloads Table - Dark Themed */
+.table {
+  background-color: transparent;
+}
+
+.table thead {
+  background-color: #15263d; /* same as .card for uniformity */
+}
+
+.table th, .table td {
+  background-color: #15263d; /* blend rows with card */
+  border-color: #1e2e47;
+}
+
+.table tr {
+  transition: background 0.2s;
+}
+.table tbody tr:hover {
+  background-color: #1e364d; /* subtle row highlight */
+}
+
+/* Ensure table text is bright and easy to read */
+.table th, .table td {
+  color: #e6eef6;      /* bright soft white-blue */
+  background-color: #15263d !important; /* ensures no override from Bootstrap */
+  font-weight: 400;
+}
+
+/* Table headings with extra contrast */
+.table th {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Download section row hover effect */
+.table tbody tr:hover {
+  background-color: #1e364d;
+  color: #ffffff;        /* Strong contrast when row is hovered */
+}
+
+/* Fix for darker devices or color-scheme issues */
+.table {
+  color-scheme: dark;
+}
+
+.table tbody tr:not(:last-child) td {
+  border-bottom: 1.5px solid #1e2e47 !important;
+}
+
+  </style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="https://github.com/eshuuux/Images/blob/main/Frame%2022.png?raw=true" width="30" height="30" class="me-2" alt="Logo">
+      Romify
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav me-2">
+        <li class="nav-item"><a class="nav-link fw-semibold" href="/homepage">Home</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="/devices">Download</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="/support">Support</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<div class="content">
+  <!-- Profile -->
+  <div class="card">
+    <h4><i class="bi bi-person-circle me-2"></i>Your Profile</h4>
+    <p><strong>Name:</strong>&nbsp;{{ name }}</p>
+    <p><strong>Email:</strong>&nbsp;{{ email }}</p>
+    <p><strong>Device:</strong>&nbsp;{{ device }}</p>
+    <p><strong>Joined:</strong>&nbsp;{{ date }}</p>
+  </div>
+
+  <!-- My Downloads -->
+  <div class="card">
+    <h4><i class="bi bi-download me-2"></i>My Downloads</h4>
+    <div class="table-responsive">
+      <table class="table align-middle">
+        <thead>
+          <tr>
+            <th>Serial</th>
+            <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ROM</th>
+            <th>&nbsp;&nbsp;&nbsp;Device</th>
+            <th>&nbsp;&nbsp;&nbsp;&nbsp;Date</th>
+            <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Pixel Experience Plus</td>
+            <td>Poco X3 Pro</td>
+            <td>25 Oct 2025</td>
+            <td><button class="btn-gradient">Re-download</button></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Lineage OS 21</td>
+            <td>Poco X3 Pro</td>
+            <td>12 Oct 2025</td>
+            <td><button class="btn-gradient">Re-download</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Settings -->
+  <div class="card">
+    <h4><i class="bi bi-gear me-2"></i>Settings</h4>
+    <form action="/upassword" method="POST">
+      <div class="mb-3">
+        <label for="currentPassword" class="form-label">Email ID</label>
+        <input type="email" class="form-control bg-transparent text-white border-secondary" name="Email1" placeholder="Enter Email">
+      </div>
+      <div class="mb-3">
+        <label for="newPassword" class="form-label">New Password</label>
+        <input type="password" class="form-control bg-transparent text-white border-secondary" name="Passw1" placeholder="Enter new password">
+      </div>
+      <div class="mb-3">
+        <label for="confirmPassword" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control bg-transparent text-white border-secondary" name="Passw2" placeholder="Confirm new password">
+      </div>
+      <button type="submit" class="btn-gradient">Update Password</button>
+       <a href="/logout" class="btn btn-gradient">Log out</a> 
+    </form>
+    
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Romify Devices</title>
+
+<!-- Bootstrap & Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg-dark:#0f1724;
+  --bg-light:#061224;
+  --muted:#9aa4b2;
+  --accent:#22c1c3;
+  --accent2:#4a67ff;
+  --radius:12px;
+  --transition:0.3s ease;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin:0;
+  background:var(--bg-dark);
+  color:#e6eef6;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.navbar {
+  background:transparent;
+  padding:0.7rem 1rem;
+  position:sticky; top:0; z-index:1030;
+  transition:background 0.3s ease, box-shadow 0.3s ease;
+}
+.navbar.scrolled { background:var(--bg-light); box-shadow:0 5px 20px rgba(0,0,0,0.4); }
+.navbar .nav-link { color:var(--muted); transition:color 0.2s; }
+.navbar .nav-link:hover { color:#fff; }
+.navbar .navbar-brand { font-weight:700; color:#fff; display:flex; align-items:center; }
+
+h2.section-title { font-weight:800; color:#fff; margin-bottom:2rem; text-align:center; }
+
+/* Devices Section */
+.devices { padding:4rem 2rem; }
+.devices .card { background:rgba(255,255,255,0.05); border:none; border-radius:var(--radius); overflow:hidden; transition: transform var(--transition), box-shadow var(--transition); }
+.devices .card:hover { transform:scale(1.05); box-shadow:0 15px 40px rgba(0,0,0,0.4); }
+.devices .card img { height:200px; object-fit:cover; transition: transform var(--transition); }
+.devices .card:hover img { transform:scale(1.08); }
+.devices .card-body h5 { color:#fff; font-weight:700; }
+.devices .card-body p { color:#ccc; font-size:0.9rem; }
+.devices .card-body a { color:var(--accent2); text-decoration:none; font-weight:600; }
+.devices .card-body a i { transition: transform var(--transition); }
+.devices .card-body a:hover i { transform:translateX(4px); }
+
+/* Footer */
+footer { background: var(--bg-dark); padding: 0.75rem 1rem; color: var(--muted); text-align: center; border-top: 1px solid rgba(255,255,255,0.053); }
+footer a { color:var(--accent2); text-decoration:none; }
+footer a:hover { text-decoration:underline; }
+footer .btn-circle { width:44px; height:44px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; background:rgba(255,255,255,0.1); color:#fff; border:none; transition: transform 0.2s ease, background 0.2s ease; }
+footer .btn-circle:hover { transform:translateY(-4px); background:rgba(255,255,255,0.2); }
+
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="https://github.com/eshuuux/Images/blob/main/Frame%2022.png?raw=true" width="30" height="30" class="me-2" alt="Logo"> Romify</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav me-2">
+        <li class="nav-item"><a class="nav-link fw-semibold" href="#">Home</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="#devices">Devices</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="#support">Support</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="hero" style="height:50vh; display:flex; align-items:center; justify-content:center; text-align:center; background: url('https://github.com/eshuuux/Images/blob/main/Samsung%20Recovery.jpg?raw=true') center/cover no-repeat;">
+  <div class="hero-overlay" style="position:absolute; inset:0; background:rgba(0,0,0,0.55);"></div>
+  <div class="hero-content" style="position:relative; z-index:1; color:#fff;">
+    <h1>Breathe new life into your device</h1>
+    <p>Discover which devices are supported by Romify ROMs</p>
+  </div>
+</section>
+
+<!-- Devices Section -->
+<section class="devices" id="devices">
+  <div class="container">
+    <h2 class="section-title">Supported Devices</h2>
+    <div class="row g-4">
+
+           <!-- Small gray note -->
+    <p style="color:#9aa4b2; font-size:0.9rem; text-align:center; margin-bottom:2rem;">
+      Currently we support only these devices. Don’t worry, we’ll add your device soon!
+    </p>
+      <!-- Device Card 1 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Pixel 6">
+          <div class="card-body">
+            <h5>Pixel 6</h5>
+            <p>Compatible ROMs: Pixel Experience, LineageOS</p>
+            <a href="#">View ROMs <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Device Card 2 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Samsung Galaxy S21">
+          <div class="card-body">
+            <h5>Samsung Galaxy S21</h5>
+            <p>Compatible ROMs: ArrowOS, LineageOS</p>
+            <a href="#">View ROMs <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <!-- Device Card 3 -->
+      <div class="col-md-4 col-sm-6">
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="OnePlus 9">
+          <div class="card-body">
+            <h5>OnePlus 9</h5>
+            <p>Compatible ROMs: Pixel Experience, ArrowOS, LineageOS</p>
+            <a href="#">View ROMs <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Footer -->
+<footer>
+  <div class="container text-center">
+    <div class="mb-3">
+      <a href="#" class="btn-circle mx-1"><i class="bi bi-discord"></i></a>
+      <a href="#" class="btn-circle mx-1"><i class="bi bi-github"></i></a>
+      <a href="#" class="btn-circle mx-1"><i class="bi bi-twitter"></i></a>
+      <a href="#" class="btn-circle mx-1"><i class="bi bi-linkedin"></i></a>
+    </div>
+    <p class="mb-0">© 2025 Romify | All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const nav = document.querySelector('.navbar');
+  window.addEventListener('scroll',()=>{window.scrollY>20?nav.classList.add('scrolled'):nav.classList.remove('scrolled');});
+</script>
+</body>
+</html>
