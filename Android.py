@@ -3,18 +3,37 @@ import sqlite3 as sql
 app=Flask(__name__)
 app.secret_key="qwertyuiop"
 
-@app.route('/login')
+@app.route('/')
 def login():
     return render_template("Login.html")
 
+@app.route('/homepage')
+def homepage():
+    return render_template("Homepage.html")
+
 @app.route('/logout')
 def logout():
-    if session.pop('email' and 'passw',None):
-       return render_template("Login.html")
+    session.pop('email' and 'passw',None)
+    return render_template("Login.html")
 
 @app.route('/registration')
 def registration():
     return render_template("Registration.html")
+
+
+@app.route('/realme')
+def realme():
+    return render_template("Realme Avail.html")
+
+@app.route('/nothing')
+def nothing():
+    return render_template("Nothing Avail.html")
+
+@app.route('/motorola')
+def motorola():
+    return render_template("Motorola Avail.html")
+
+
 
 @app.route('/userdash')
 def userdash():
@@ -65,6 +84,8 @@ def saveform():
         dev=request.form["Device1"]
         dat=request.form["Date1"]
         passw=request.form["Password1"]
+        return render_template("index.html")
+    
         con=sql.connect("Storage.db")
         c=con.cursor()
         c.execute("insert into user(Name,Email,Device,Date,Password) values(?,?,?,?,?)",(nam,em,dev,dat,passw))

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pixel Experience | Realme 8 | Romify</title>
+
+<!-- Bootstrap & Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg-dark: #0f1724;
+  --bg-light: #061224;
+  --muted: #9aa4b2;
+  --accent: #22c1c3;
+  --accent2: #4a67ff;
+  --radius: 12px;
+  --transition: 0.3s ease;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-dark);
+  color: #e6eef6;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  background: transparent;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+.navbar.scrolled { background: var(--bg-light); box-shadow: 0 5px 20px rgba(0,0,0,0.4); }
+.navbar .nav-link { color: var(--muted); transition: color 0.2s; }
+.navbar .nav-link:hover { color: #fff; }
+.navbar .navbar-brand { font-weight: 700; color: #fff; }
+
+/* Hero */
+.hero {
+  height: 50vh;
+  position: relative;
+  background: url('https://github.com/eshuuux/Images/blob/main/pixel_experience.jpg?raw=true') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+.hero h1 {
+  position: relative;
+  z-index: 1;
+  font-weight: 800;
+  color: #fff;
+}
+
+/* Section styling */
+.section {
+  padding: 4rem 2rem;
+}
+
+/* Buttons */
+.btn-custom {
+  background: var(--accent2);
+  border: none;
+  color: #fff;
+  border-radius: var(--radius);
+  transition: background var(--transition);
+}
+.btn-custom:hover {
+  background: var(--accent);
+}
+
+/* Carousel */
+.carousel-inner img {
+  border-radius: var(--radius);
+  object-fit: cover;
+  height: 400px;
+}
+
+/* Installation */
+.install {
+  background: var(--bg-light);
+  border-radius: var(--radius);
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
+/* Footer */
+footer {
+  background: var(--bg-dark);
+  padding: 1rem;
+  color: var(--muted);
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+footer a {
+  color: var(--accent2);
+  text-decoration: none;
+}
+footer .btn-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  border: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+footer .btn-circle:hover {
+  transform: translateY(-4px);
+  background: rgba(255,255,255,0.2);
+}
+
+.btn-gradient {
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  color: #061224;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 40px;
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-gradient:hover {
+  transform: scale(1.05);
+  color: #fff;
+}
+
+
+</style>
+</head>
+
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/"><img src="https://github.com/eshuuux/Images/blob/main/Frame%2022.png?raw=true" width="30" height="30" class="me-2"> Romify</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav me-2">
+        <li class="nav-item"><a class="nav-link" href="/homepage">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/devices">Devices</a></li>
+        <li class="nav-item"><a class="nav-link" href="/support">Support</a></li>
+        <li class="nav-item"><a class="nav-link" href="/userdash">Account</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <h1>Arrow OS — Realme 8</h1>
+</section>
+
+<!-- ROM Info -->
+<section class="section container text-center">
+  <h2 class="fw-bold mb-3">About Arrow OS</h2>
+  <p style="color: #f1f5ff; font-size: 1rem; line-height: 1.8;" class="mb-4">
+    <strong>ArrowOS</strong> is a lightweight and minimal Android-based ROM that focuses on 
+    <strong>simplicity, performance, and stability</strong>. Designed to be smooth and efficient, 
+    it delivers a clean user experience with just the right amount of customization — without 
+    unnecessary bloat or heavy system modifications.
+  </p>
+  <p style="color: #f1f5ff; font-size: 1rem; line-height: 1.8;" class="mb-5">
+    Built from the <strong>Android Open Source Project (AOSP)</strong>, ArrowOS emphasizes 
+    <strong>speed, battery efficiency, and user control</strong>. It provides essential tools for 
+    customization, while maintaining a near-stock Android look — making it ideal for users who 
+    prefer a clean, responsive, and reliable daily driver for their Realme 8.
+  </p>
+</section>
+
+
+  <div class="d-flex justify-content-center flex-wrap gap-3">
+    <a href="https://download.pixelexperience.org/realme8" 
+       class="btn-gradient" target="_blank">
+       <i class="bi bi-download me-1"></i> Download ROM
+    </a>
+    <a href="https://pixelexperience.org/" 
+       class="btn-gradient" target="_blank">
+       <i class="bi bi-globe me-1"></i> Visit Official Site
+    </a>
+  </div>
+</section>
+
+<!-- Screenshots -->
+<section class="section container">
+  <h3 class="fw-bold text-center mb-4">Screenshots</h3>
+  <div id="pixelCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://github.com/eshuuux/Images/blob/main/pixel_ss1.jpg?raw=true" class="d-block w-100" alt="Pixel Experience Screenshot 1">
+      </div>
+      <div class="carousel-item">
+        <img src="https://github.com/eshuuux/Images/blob/main/pixel_ss2.jpg?raw=true" class="d-block w-100" alt="Pixel Experience Screenshot 2">
+      </div>
+      <div class="carousel-item">
+        <img src="https://github.com/eshuuux/Images/blob/main/pixel_ss3.jpg?raw=true" class="d-block w-100" alt="Pixel Experience Screenshot 3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#pixelCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#pixelCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</section>
+
+<!-- Installation -->
+<section class="install container">
+  <h3 class="fw-bold mb-3">Installation Guide for Arrow OS(Realme 8)</h3>
+  <ol>
+    <li>Make sure your bootloader is unlocked.</li>
+    <li>Install latest recovery (TWRP or OrangeFox).</li>
+    <li>Download the Arrow OS and GApps (if needed).</li>
+    <li>Reboot to recovery and perform a clean wipe (data, cache, system).</li>
+    <li>Flash the ROM zip and reboot the device.</li>
+    <li>Enjoy the Arrow OS interface on your Realme 8!</li>
+  </ol>
+  <p class="text-muted mt-2">⚠️ Follow official Arrow OS instructions for safety. Romify is not responsible for any device issues.</p>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container text-center">
+    <div class="mb-3">
+      <a href="#" class="btn-circle mx-1"><i class="bi bi-discord"></i></a>
+      <a href="#" class="btn-circle mx-1"><i class="bi bi-github"></i></a>
+      <a href="#" class="btn-circle mx-1"><i class="bi bi-twitter"></i></a>
+      <a href="#" class="btn-circle mx-1"><i class="bi bi-linkedin"></i></a>
+    </div>
+    <p class="mb-0">© 2025 Romify | All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const nav = document.querySelector('.navbar');
+  window.addEventListener('scroll', () => {
+    window.scrollY > 20 ? nav.classList.add('scrolled') : nav.classList.remove('scrolled');
+  });
+</script>
+
+</body>
+</html>

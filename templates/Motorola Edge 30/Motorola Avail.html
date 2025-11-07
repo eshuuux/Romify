@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motorola Edge 30 | Romify</title>
+
+<!-- Bootstrap & Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" defer></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg-dark: #0f1724;
+  --bg-light: #061224;
+  --muted: #9aa4b2;
+  --accent: #22c1c3;
+  --accent2: #4a67ff;
+  --radius: 12px;
+  --transition: 0.3s ease;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-dark);
+  color: #e6eef6;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  background: transparent;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+.navbar.scrolled { background: var(--bg-light); box-shadow: 0 5px 20px rgba(0,0,0,0.4); }
+.navbar .nav-link { color: var(--muted); transition: color 0.2s; }
+.navbar .nav-link:hover { color: #fff; }
+.navbar .navbar-brand { font-weight: 700; color: #fff; }
+
+/* Hero */
+.hero {
+  height: 55vh;
+  position: relative;
+  background: url('https://fdn2.gsmarena.com/vv/pics/motorola/motorola-edge30-1.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+.hero h1 {
+  position: relative;
+  z-index: 1;
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+}
+
+/* ROM Cards */
+.roms {
+  padding: 4rem 2rem;
+}
+.rom-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.rom-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+}
+.rom-card img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+.rom-card .card-body h5 {
+  color: #fff;
+  font-weight: 700;
+}
+.rom-card .card-body p {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+/* 🌈 Gradient Button */
+.btn-gradient {
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  color: #061224;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  padding: 10px 35px;
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-block;
+}
+.btn-gradient:hover {
+  transform: scale(1.05);
+  color: #fff;
+  box-shadow: 0 0 10px rgba(34,193,195,0.4);
+}
+
+/* Subtitle and Divider */
+.section-subtitle {
+  color: #b2b8c2;
+  text-align: center;
+  margin-top: -1rem;
+  margin-bottom: 2.5rem;
+  font-size: 0.95rem;
+}
+.divider {
+  width: 160px;
+  height: 2px;
+  background: rgba(255,255,255,0.1);
+  margin: 0.5rem auto 1.5rem;
+  border-radius: 2px;
+}
+
+/* Installation Guide */
+.install {
+  background: var(--bg-light);
+  padding: 4rem 2rem;
+  border-radius: var(--radius);
+  margin: 4rem auto;
+  max-width: 900px;
+}
+.install h3 {
+  color: #fff;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+}
+.install ol li {
+  color: #ccc;
+  margin-bottom: 0.8rem;
+}
+
+/* Footer */
+footer {
+  background: var(--bg-dark);
+  padding: 0.75rem 1rem;
+  color: var(--muted);
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.053);
+}
+footer a {
+  color: var(--accent2);
+  text-decoration: none;
+}
+footer .btn-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  border: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+footer .btn-circle:hover {
+  transform: translateY(-4px);
+  background: rgba(255,255,255,0.2);
+}
+</style>
+</head>
+
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="https://github.com/eshuuux/Images/blob/main/Frame%2022.png?raw=true" width="30" height="30" class="me-2"> Romify</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav me-2">
+        <li class="nav-item"><a class="nav-link" href="/homepage">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/devices">Devices</a></li>
+        <li class="nav-item"><a class="nav-link" href="/support">Support</a></li>
+        <li class="nav-item"><a class="nav-link" href="/userdash">Account</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <h1>Motorola Edge 30 — Custom ROMs & Guides</h1>
+</section>
+
+<!-- ROMs -->
+<section class="roms container">
+  <h2 class="text-center fw-bold mb-2">Available ROMs</h2>
+  <div class="divider"></div>
+  <p class="section-subtitle">We currently support these ROMs. More coming soon!</p>
+
+  <!-- Center cards horizontally -->
+  <div class="row g-4 justify-content-center text-center">
+
+    <!-- ROM 1 -->
+    <div class="col-md-5 col-lg-4">
+      <div class="rom-card card h-100">
+        <img src="https://github.com/eshuuux/Images/blob/main/pixel_experience.jpg?raw=true" alt="Pixel Experience">
+        <div class="card-body">
+          <h5>Pixel Experience</h5>
+          <p>Clean stock Android UI with Google features. Stable and smooth for Moto Edge 30.</p>
+          <a href="#" class="btn-gradient mt-2">Details</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ROM 2 -->
+    <div class="col-md-5 col-lg-4">
+      <div class="rom-card card h-100">
+        <img src="https://github.com/eshuuux/Images/blob/main/lineageos.jpg?raw=true" alt="LineageOS">
+        <div class="card-body">
+          <h5>Lineage OS</h5>
+          <p>Open-source, privacy-respecting, and stable — perfect for daily drivers.</p>
+          <a href="#" class="btn-gradient mt-2">Details</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Installation Guide -->
+<section class="install container">
+  <h3>Installation Guide for Moto Edge 30</h3>
+  <ol>
+    <li>Unlock your bootloader (ensure you back up data first).</li>
+    <li>Install latest TWRP or OrangeFox recovery.</li>
+    <li>Download your desired ROM and GApps package.</li>
+    <li>Boot into recovery and wipe data, cache, and system.</li>
+    <li>Flash the ROM zip and then flash GApps (if required).</li>
+    <li>Reboot your device and enjoy your new ROM!</li>
+  </ol>
+  <p class="mt-3 text-muted">⚠️ Make sure to read official ROM instructions before flashing. Romify isn’t responsible for device damage.</p>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container text-center">
+    <div class="mb-3">
+      <a href="#" class="btn-circle mx-1"><i class="bi bi-discord"></i></a>
+      <a href="#" class="btn-circle mx-1"><i class="bi bi-github"></i></a>
+      <a href="#" class="btn-circle mx-1"><i class="bi bi-twitter"></i></a>
+      <a href="#" class="btn-circle mx-1"><i class="bi bi-linkedin"></i></a>
+    </div>
+    <p class="mb-0">© 2025 Romify | All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const nav = document.querySelector('.navbar');
+  window.addEventListener('scroll', () => {
+    window.scrollY > 20 ? nav.classList.add('scrolled') : nav.classList.remove('scrolled');
+  });
+</script>
+</body>
+</html>
